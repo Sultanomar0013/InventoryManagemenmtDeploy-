@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://inventory-managemenmt-deploy.vercel.app',
     methods: [ 'PUT', 'GET', 'POST', 'DELETE'],
   }));
 app.use("/api", sellProductRouter);

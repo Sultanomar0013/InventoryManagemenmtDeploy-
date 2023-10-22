@@ -18,7 +18,7 @@ function ImportProduct() {
         };
         
         try {
-            const response = await fetch("http://localhost:3001/api/importProduct", {
+            const response = await fetch("https://inventory-managemenmt.vercel.app/importProduct", {
                 method: "PUT",
                 body: JSON.stringify(data), 
                 headers: {

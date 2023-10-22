@@ -10,7 +10,7 @@ function Home() {
 
   const fetchProductList = useCallback(async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/home", {
+      const response = await fetch("https://inventory-managemenmt.vercel.app/home", {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,

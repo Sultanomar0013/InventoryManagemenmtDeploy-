@@ -26,7 +26,7 @@ function AddNewProduct() {
         formData.append("productImage", selectedImage);
         formData.append("token" , token);
         try {
-            const response = await fetch("http://localhost:3001/api/addProduct", {
+            const response = await fetch("https://inventory-managemenmt.vercel.app/addProduct", {
                 method: "POST",
                 body: formData,
                 headers: {

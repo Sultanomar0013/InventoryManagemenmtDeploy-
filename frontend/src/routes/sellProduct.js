@@ -18,7 +18,7 @@ function SellProduct() {
         };
         
         try {
-            const response = await fetch("http://localhost:3001/api//sellProduct", {
+            const response = await fetch("https://inventory-managemenmt.vercel.app/sellProduct", {
                 method: "PUT",
                 body: JSON.stringify(data), 
                 headers: {
