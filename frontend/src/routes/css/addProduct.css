@@ -1,0 +1,103 @@
+.addProduct-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-image: url('../../../public/images/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.addProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+    margin: 30px auto;
+    margin-right: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.titleAddproduct {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.addProductLabel {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.Inputbox2 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.Selectbox2 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.Inputbox3{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.check {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.checkbox1 {
+    margin-right: 10px;
+}
+
+.AddProductbutton1 {
+    width: 100%;
+    padding: 10px;
+    background-color: #f34040;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.AddProductbutton1:hover {
+    background-color: #a3220b;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 600px) {
+    .addProduct {
+        max-width: 90%;
+    }
+
+    .Inputbox2,
+    .Selectbox2 {
+        font-size: 14px;
+    }
+
+    .AddProductbutton1 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .title1 {
+        font-size: 20px;
+    }
+
+    .AddProductbutton1 {
+        font-size: 14px;
+    }
+}

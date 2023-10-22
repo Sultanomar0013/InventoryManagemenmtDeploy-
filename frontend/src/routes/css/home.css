@@ -1,0 +1,83 @@
+@keyframes popup1 {
+  0% {
+      transform: scale(1.5);
+  }
+
+  50% {
+    transform: scale(1.5);
+}
+
+100% {
+  transform: scale(1.5);
+}
+}
+
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  background-color: #f9f8f8;
+}
+
+.AddproductDiv {
+  background-color: #fffafa;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.AddproductUl {
+  padding: 0;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.AddproductDiv1 {
+  display: flex;
+  margin-left: 100px;
+  gap: 10px;
+}
+
+.AddproductBtn {
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8a9094;
+  margin-top: 15px;
+  margin-left: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.AddproductBtn:hover {
+  background-color: #b30000;
+}
+
+.product.List {
+  text-align: center;
+}
+
+.List h1{
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+  background-color: #f12f2f;
+  color: #fff;
+}
+.get-product{
+  display: flex;
+  justify-content: center;
+}
+.get-productli{
+  padding: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ccc;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.get-productli:hover {
+  background-color: #e27272;
+  animation: popup1 2s infinite;
+}
