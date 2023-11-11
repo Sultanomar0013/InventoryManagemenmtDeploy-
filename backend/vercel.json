@@ -16,7 +16,7 @@
             "src": "/api/(.*)",
             "methods": [
                 "OPTIONS"
-            ], 
+            ],
             "status": 204,
             "headers": [
                 {
@@ -25,7 +25,7 @@
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
-                    "value": "true"
+                    "value": "https://inventory-managemenmt-deploy.vercel.app"
                 },
                 {
                     "key": "Access-Control-Allow-Methods",
