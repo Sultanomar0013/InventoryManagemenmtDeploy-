@@ -11,12 +11,6 @@
         {
             "src": "/(.*)",
             "dest": "/app.js"
-        },
-        {
-            "src": "/api/(.*)",
-            "methods": [
-                "OPTIONS"
-            ]
         }
     ]
 }
