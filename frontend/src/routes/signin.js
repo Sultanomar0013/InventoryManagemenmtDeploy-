@@ -14,7 +14,7 @@ function SignIn() {
     try {
       setLoading(true); // Start loading
 
-      const response = await fetch("https://inventory-managemenmt.vercel.app/signin", {
+      const response = await fetch("https://inventory-management-mu.vercel.app/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
