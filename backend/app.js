@@ -11,21 +11,9 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(cors({
-    origin: 'https://inventory-managemenmt-deploy.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204,
-  }));
-
-  app.use((req, res, next) => {
-    if (req.method === 'OPTIONS') {
-      res.sendStatus(204);
-    } else {
-      next();
-    }
-  });
+app.use(cors());
   
+
 app.use("/api", sellProductRouter);
 
 app.use("/api", importProductRouter); 
