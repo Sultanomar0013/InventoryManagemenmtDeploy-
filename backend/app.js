@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: "*",
+    origin: 'https://inventory-managemenmt-deploy.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
