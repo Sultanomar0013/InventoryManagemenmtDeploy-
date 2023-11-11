@@ -9,10 +9,17 @@ const importProductRouter = require("./routes/importProductRouter");
 const sellProductRouter = require("./routes/sellProductRouter");
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json(
+  {
+    origin: 'https://inventory-managemenmt-deploy.vercel.app',
+  }
+));
 
 app.use(cors());
-  
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 app.use("/api", sellProductRouter);
 
