@@ -14,7 +14,7 @@ function SignUp() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://inventory-managemenmt.vercel.app/signup", {
+      const response = await fetch("/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
