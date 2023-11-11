@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 app.use(cors({
     origin: 'https://inventory-managemenmt-deploy.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true
+    credentials: true,
+    optionsSuccessStatus: 204,
   }));
 app.use("/api", sellProductRouter);
 
