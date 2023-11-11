@@ -20,6 +20,7 @@ function SignUp() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ userName, email, password }),
+        mode: 'no-cors',
       });
 
       if (response.ok) {

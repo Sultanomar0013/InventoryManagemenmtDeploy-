@@ -20,6 +20,7 @@ function SignIn() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
+        mode: 'no-cors',
       });
 
       if (response?.status === 200) {
