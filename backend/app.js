@@ -14,6 +14,9 @@ app.use(bodyParser.json());
 app.use(cors({
     origin: 'https://inventory-managemenmt-deploy.vercel.app',
     methods: [ 'PUT', 'GET', 'POST', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'], // Add other headers if needed
+    credentials: true, // Allow cookies and credentials
+    optionsSuccessStatus: 204, // No Content response for preflight requests
   }));
 app.use("/api", sellProductRouter);
 
