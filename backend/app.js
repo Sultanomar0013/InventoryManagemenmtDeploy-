@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'https://inventory-managemenmt-deploy.vercel.app',
+    origin: 'https://inventory-managemenmt.vercel.app/',
     methods: [ 'PUT', 'GET', 'POST', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'], // Add other headers if needed
     credentials: true, // Allow cookies and credentials
