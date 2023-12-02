@@ -9,11 +9,18 @@ const productgetRouter = require('./routes/productgetRouter')
 const importProductRouter = require("./routes/importProductRouter");
 const sellProductRouter = require("./routes/sellProductRouter");
 const app = express();
-const apiBaseUrl = process.env.API_BASE_URL;
+//const apiBaseUrl = process.env.API_BASE_URL;
 
-app.use(bodyParser.json());
+/*const corsOptions = {
+  origin: apiBaseUrl
+};*/
 
+
+
+app.use(express.json());
 app.use(cors());
+
+//app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

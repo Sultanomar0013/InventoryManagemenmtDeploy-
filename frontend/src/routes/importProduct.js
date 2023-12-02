@@ -4,7 +4,7 @@ import Navbar from "../Components/Navbar";
 import "./css/importProduct.css";
 
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
-const url = `${backendUrl}/api/importProduct`; 
+const urlpro = `${backendUrl}/api/importProduct`; 
 function ImportProduct() {
     const [importproductName, setProduct] = useState("");
     const [importQuantity, setImportQuantity] = useState("");
@@ -20,7 +20,7 @@ function ImportProduct() {
         };
         
         try {
-            const response = await fetch(url, {
+            const response = await fetch(urlpro, {
                 method: "PUT",
                 body: JSON.stringify(data), 
                 headers: {

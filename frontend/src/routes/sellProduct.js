@@ -4,7 +4,7 @@ import Navbar from "../Components/Navbar";
 import "./css/sellProduct.css";
 
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
-const url = `${backendUrl}/api/sellProduct`; 
+const urlsell = `${backendUrl}/api/sellProduct`; 
 function SellProduct() {
     const [sellproductName, setsellProduct] = useState("");
     const [sellQuantity, setSellQuantity] = useState("");
@@ -20,7 +20,7 @@ function SellProduct() {
         };
         
         try {
-            const response = await fetch(url, {
+            const response = await fetch(urlsell, {
                 method: "PUT",
                 body: JSON.stringify(data), 
                 headers: {

@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./css/signup.css";
-
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
 const url = `${backendUrl}/api/signup`; 
+
 function SignUp() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const navigate = useNavigate();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

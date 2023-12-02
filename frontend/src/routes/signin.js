@@ -4,7 +4,7 @@ import Navbar from "../Components/Navbar";
 import "./css/signin.css";
 
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
-const url = `${backendUrl}/api/signin`; 
+const urls = `${backendUrl}/api/signin`; 
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +16,7 @@ function SignIn() {
     try {
       setLoading(true); // Start loading
 
-      const response = await fetch(url , {
+      const response = await fetch(urls , {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

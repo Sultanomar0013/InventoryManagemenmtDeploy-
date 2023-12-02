@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./css/addProduct.css";
 
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
-const url = `${backendUrl}/api/addProduct`; 
+const urladd = `${backendUrl}/api/addProduct`; 
 
 function AddNewProduct() {
     const [productName, setProductName] = useState("");
@@ -28,7 +28,7 @@ function AddNewProduct() {
         formData.append("productQuantity", productQuantity);
         formData.append("productImage", selectedImage);
         try {
-            const response = await fetch(url , {
+            const response = await fetch(urladd , {
                 method: "POST",
                 body: formData,
                 headers: {
