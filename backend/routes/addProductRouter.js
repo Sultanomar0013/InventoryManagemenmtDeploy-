@@ -3,12 +3,13 @@ const multer = require("multer");
 const addProductrouter = express.Router();
 const Product = require("../models/addproduct");
 
+
 const secretKey = process.env.JWT_SECRET_KEY;
 const jwt = require("jsonwebtoken");
 
 
 const storage = multer.memoryStorage();
-const upload = multer({ storage });
+const upload = multer({ storage:storage });
 
 addProductrouter.post("/addProduct", upload.single("productImage"), async (req, res) => {
     try {
@@ -23,12 +24,13 @@ addProductrouter.post("/addProduct", upload.single("productImage"), async (req, 
         
         
         const productImageBuffer = req.file.buffer;
+        const productImageBase64 = productImageBuffer.toString('base64'); 
         const product = new Product({
             productName,
             productType,
             productQuantity,
             productImage: {
-                data: productImageBuffer,
+                data: productImageBase64,
                 contentType: req.file.mimetype
             },
             email: userEmail,

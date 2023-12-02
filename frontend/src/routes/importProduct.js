@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import "./css/importProduct.css";
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const url = `${backendUrl}/api/importProduct`; 
 function ImportProduct() {
     const [importproductName, setProduct] = useState("");
     const [importQuantity, setImportQuantity] = useState("");
@@ -18,7 +20,7 @@ function ImportProduct() {
         };
         
         try {
-            const response = await fetch("https://inventory-managemenmt.vercel.app/importProduct", {
+            const response = await fetch(url, {
                 method: "PUT",
                 body: JSON.stringify(data), 
                 headers: {

@@ -3,6 +3,9 @@ import Navbar from "../Components/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./css/addProduct.css";
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const url = `${backendUrl}/api/addProduct`; 
+
 function AddNewProduct() {
     const [productName, setProductName] = useState("");
     const [productType, setProductType] = useState("");
@@ -24,9 +27,8 @@ function AddNewProduct() {
         formData.append("productType", productType);
         formData.append("productQuantity", productQuantity);
         formData.append("productImage", selectedImage);
-        formData.append("token" , token);
         try {
-            const response = await fetch("https://inventory-managemenmt.vercel.app/addProduct", {
+            const response = await fetch(url , {
                 method: "POST",
                 body: formData,
                 headers: {

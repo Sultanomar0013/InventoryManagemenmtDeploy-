@@ -3,6 +3,8 @@ import Navbar from "../Components/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./css/signup.css";
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const url = `${backendUrl}/api/signup`; 
 function SignUp() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,7 +16,7 @@ function SignUp() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://inventory-management-mu.vercel.app/signup", {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

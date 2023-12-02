@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import "./css/signin.css";
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const url = `${backendUrl}/api/signin`; 
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +16,7 @@ function SignIn() {
     try {
       setLoading(true); // Start loading
 
-      const response = await fetch("https://inventory-management-mu.vercel.app/signin", {
+      const response = await fetch(url , {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

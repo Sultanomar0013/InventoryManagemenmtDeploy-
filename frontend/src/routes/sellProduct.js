@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import "./css/sellProduct.css";
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const url = `${backendUrl}/api/sellProduct`; 
 function SellProduct() {
     const [sellproductName, setsellProduct] = useState("");
     const [sellQuantity, setSellQuantity] = useState("");
@@ -18,7 +20,7 @@ function SellProduct() {
         };
         
         try {
-            const response = await fetch("https://inventory-management-mu.vercel.app/sellProduct", {
+            const response = await fetch(url, {
                 method: "PUT",
                 body: JSON.stringify(data), 
                 headers: {

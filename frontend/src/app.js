@@ -7,6 +7,7 @@ import SignUp from "./routes/signup";
 import AddNewProduct from "./routes/addProduct";
 import ImportProduct from "./routes/importProduct";
 import SellProduct from "./routes/sellProduct";
+//const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 function App() {
   return (

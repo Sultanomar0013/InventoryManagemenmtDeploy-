@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Navbar from "../Components/Navbar";
 import "./css/home.css";
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const url = `${backendUrl}/api/home`; 
 
 function Home() {
   const [productList, setProductList] = useState([]);
@@ -10,7 +12,7 @@ function Home() {
 
   const fetchProductList = useCallback(async () => {
     try {
-      const response = await fetch("https://inventory-managemenmt.vercel.app/home", {
+      const response = await fetch(url , {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,

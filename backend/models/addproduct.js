@@ -19,7 +19,7 @@ const addProductSchema = new mongoose.Schema({
         required: true
     },
     productImage: {
-        data:Buffer,
+        data:String,
         contentType: String
     }
 });
